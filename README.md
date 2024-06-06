@@ -21,10 +21,9 @@ git clone https://github.com/your-username/library-task.git
 
 3. Install dependencies:
 
-With npm:
-npm install
-Or with yarn:
-yarn install
+  npm install
+  # or
+  yarn install
 
 ### Running the Application
 
@@ -33,8 +32,5 @@ Once the dependencies are installed, you can start the development server.
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 open this link in your browser http://localhost:5173/.
