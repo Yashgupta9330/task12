@@ -20,8 +20,8 @@ export default function Card({book,remove=false,removeFromBookshelf}) {
     <div className="flex flex-col border border-gray-300 rounded-lg p-4 shadow-md w-[300px] h-[250px] justify-between">
       <div className="flex flex-col gap-2">
         <div className='flex gap-1'>
-        <div className="text-xl font-semibold w-2/5">Book title:</div>
-        <div className='text-[18px]'>{book.title}</div>
+        <div className="text-xl font-semibold w-[45%]">Book title:</div>
+        <div className='text-[18px] w-1/2'>{book.title}</div>
         </div>
         <div>
           <span className="text-xl font-semibold">Edition:</span> {book.edition_count}
