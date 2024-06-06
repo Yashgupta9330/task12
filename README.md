@@ -24,7 +24,7 @@ With npm: npm i
  or
 with yarn: yarn i
 
-4.### Running the Application
+### Running the Application
 
 Once the dependencies are installed, you can start the development server.
 
