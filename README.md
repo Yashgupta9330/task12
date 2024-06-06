@@ -24,7 +24,7 @@ git clone https://github.com/your-username/library-task.git
 With npm:
 npm install
 Or with yarn:
-yarn i
+yarn install
 
 ### Running the Application
 
