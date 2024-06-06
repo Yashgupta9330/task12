@@ -30,8 +30,11 @@ yarn install
 
 Once the dependencies are installed, you can start the development server.
 
-With npm: npm run dev
-or
-With yarn: yarn run dev
-
-This command will start the development server and open the application in your localhost http://localhost:5173/.
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+open this link in your browser http://localhost:5173/.
