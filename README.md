@@ -20,9 +20,11 @@ git clone https://github.com/your-username/library-task.git
 
 
 3. Install dependencies:
-With npm: npm i
- or
-with yarn: yarn i
+
+With npm:
+npm install
+Or with yarn:
+yarn i
 
 ### Running the Application
 
