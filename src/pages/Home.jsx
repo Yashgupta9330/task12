@@ -1,29 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
 import Navbar from '../components/Navbar';
 import "../App.css"
 export default function Home(){
 
-  const [search, setSearch] = useState('YOUR_QUERY');
+  const [search, setSearch] = useState('');
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
+  const abortControllerRef = useRef(null);
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true); // Set loading state to true while fetching data
+      abortControllerRef.current?.abort();
+      abortControllerRef.current = new AbortController();
+      setLoading(true); 
       try {
-        const response = await axios.get(`https://openlibrary.org/search.json?q=${search}&limit=10&page=1`);
+        const response = await axios.get(`https://openlibrary.org/search.json?q=${search}&limit=10&page=1`,
+          {signal:abortControllerRef.current?.signal});
         setBooks(response.data.docs);
       } 
       catch (error) {
         console.error('Error fetching data:', error);
       }
-      setLoading(false); // Set loading state to false after data fetching is done
+      setLoading(false); 
     }
-    if(search.trim() != "") {
+      if(search.trim()!=""){
       fetchData();
-    }
+      }
+
   }, [search]);
 
   return(
